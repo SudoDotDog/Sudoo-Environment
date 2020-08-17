@@ -30,4 +30,21 @@ export class Environment<Env extends Record<string, string>> {
 
         this._environments = environments;
     }
+
+    public get environments(): Env {
+        return this._environments;
+    }
+
+    public get<Key extends keyof Env>(key: Key): Env[Key] {
+
+        return this._environments[key];
+    }
+
+    public has<Key extends keyof Env>(key: Key): boolean {
+
+        if (this._environments[key]) {
+            return true;
+        }
+        return false;
+    }
 }
