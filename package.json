@@ -15,8 +15,10 @@
     "url": "https://github.com/SudoDotDog/Sudoo-Environment/issues"
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Environment#readme",
+  "dependencies": {
+    "@sudoo/io": "^1.8.0"
+  },
   "devDependencies": {
-    "@sudoo/io": "^1.8.0",
     "@sudoo/triforce": "^2.7.12"
   },
   "nyc": {
