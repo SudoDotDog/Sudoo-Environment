@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/environment",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": ":exclamation: Environment Control for NodeJS",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "@sudoo/io": "^1.8.0"
   },
   "devDependencies": {
-    "@sudoo/triforce": "^2.7.12"
+    "@sudoo/triforce": "^2.7.13"
   },
   "nyc": {
     "extension": [
