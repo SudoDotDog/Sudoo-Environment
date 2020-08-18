@@ -4,11 +4,14 @@
  * @description Environment
  */
 
-import { readTextFileSync, readTextFile } from "@sudoo/io";
+import { readTextFile, readTextFileSync } from "@sudoo/io";
+import * as Path from "path";
 
 export class Environment<Env extends Record<string, string>> {
 
-    public static fromFileSync<Env extends Record<string, string>>(path: string): Environment<Env> {
+    public static fromFileSync<Env extends Record<string, string>>(...paths: string[]): Environment<Env> {
+
+        const path: string = Path.resolve(...paths);
 
         const raw: string = readTextFileSync(path);
         const environments: Env = JSON.parse(raw);
@@ -16,7 +19,9 @@ export class Environment<Env extends Record<string, string>> {
         return new Environment<Env>(environments);
     }
 
-    public static async fromFile<Env extends Record<string, string>>(path: string): Promise<Environment<Env>> {
+    public static async fromFile<Env extends Record<string, string>>(...paths: string[]): Promise<Environment<Env>> {
+
+        const path: string = Path.resolve(...paths);
 
         const raw: string = await readTextFile(path);
         const environments: Env = JSON.parse(raw);
