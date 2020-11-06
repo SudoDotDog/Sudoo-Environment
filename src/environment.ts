@@ -9,6 +9,7 @@ import * as Path from "path";
 
 export class Environment<Env extends Record<string, string>> {
 
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     public static fromFileSync<Env extends Record<string, string>>(...paths: string[]): Environment<Env> {
 
         const path: string = Path.resolve(...paths);
@@ -19,6 +20,7 @@ export class Environment<Env extends Record<string, string>> {
         return new Environment<Env>(environments);
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     public static async fromFile<Env extends Record<string, string>>(...paths: string[]): Promise<Environment<Env>> {
 
         const path: string = Path.resolve(...paths);
