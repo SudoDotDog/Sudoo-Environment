@@ -14,3 +14,19 @@ yarn add @sudoo/environment
 # Or
 npm install @sudoo/environment --save
 ```
+
+## Usage
+
+```ts
+import { Environment } from "@sudoo/environment";
+
+type ConfigVariables = {
+    readonly version: string;
+};
+
+const env: Environment = await Environment.fromFile('./config.json');
+// Or
+const env: Environment = Environment.fromFileSync('./config.json');
+
+console.log(env.getKey("version")); // Version
+```
