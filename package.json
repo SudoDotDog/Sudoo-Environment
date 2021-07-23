@@ -1,7 +1,7 @@
 {
   "name": "@sudoo/environment",
   "version": "1.1.0",
-  "description": ":exclamation: Environment Control for NodeJS",
+  "description": "Environment Control for NodeJS",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SudoDotDog/Sudoo-Environment.git"
